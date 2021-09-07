@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="olive_700">#344955</color>
+    <color name="olive_800">#232F34</color>
+    <color name="olive_600">#4A6572</color>
+
+    <color name="emphasize_yellow_text">#F9AA33</color>
+</resources>
