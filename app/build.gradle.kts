@@ -68,5 +68,19 @@ dependencies {
     implementation(Deps.androidxNavigationUi)
     // implementation(Deps.androidxNavigationCompose) // Uncomment after minSdk 31
 
+    implementation(Deps.androidHilt)
+    implementation(Deps.androidxHiltCommon)
+    implementation(Deps.androidxHiltViewModel)
+    kapt(Deps.androidHiltCompiler)
+    kapt(Deps.androidxHiltCompiler)
+
+    implementation(Deps.androidxComposeUi)
+    implementation(Deps.androidxComposeMaterial)
+    implementation(Deps.androidxComposeAnimation)
+    implementation(Deps.androidxComposeActivity)
+    implementation(Deps.androidxComposeUiTool)
+    implementation(Deps.androidxComposeLifecycleViewModel)
+    implementation(Deps.androidxComposeHilt)
+
     testImplementation(Deps.junit)
 }

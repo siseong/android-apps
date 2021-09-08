@@ -23,6 +23,15 @@ object Versions {
 
     const val androidxNavVersion = "2.3.5"
 
+    const val androidHilt = "2.38.1"
+    const val androidxHilt = "1.0.0"
+    const val androidxHiltLifecycle = "1.0.0-alpha03"
+
+    const val androidxActivityCompose = "1.3.1"
+    const val androidxCompose = "1.0.1"
+    const val androidxComposeLifecycleViewModel = "1.0.0-alpha07"
+    const val androidxComposeHilt = "1.0.0-alpha02"
+
     const val junit = "4.13.2"
 }
 
@@ -47,6 +56,26 @@ object Deps {
     const val androidxNavigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.androidxNavVersion}"
     const val androidxNavigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.androidxNavVersion}"
     const val androidxNavigationCompose = "androidx.navigation:navigation-compose:2.4.0-alpha08"
+
+    const val androidHilt = "com.google.dagger:hilt-android:${Versions.androidHilt}"
+    const val androidHiltCompiler =
+        "com.google.dagger:hilt-android-compiler:${Versions.androidHilt}"
+    const val androidxHiltCommon = "androidx.hilt:hilt-common:${Versions.androidxHilt}"
+    const val androidxHiltViewModel =
+        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.androidxHiltLifecycle}"
+    const val androidxHiltCompiler = "androidx.hilt:hilt-compiler:${Versions.androidxHilt}"
+
+    const val androidxComposeUi = "androidx.compose.ui:ui:${Versions.androidxCompose}"
+    const val androidxComposeMaterial = "androidx.compose.material:material:${Versions.androidxCompose}"
+    const val androidxComposeAnimation = "androidx.compose.animation:animation:${Versions.androidxCompose}"
+    const val androidxComposeActivity =
+        "androidx.activity:activity-compose:${Versions.androidxActivityCompose}"
+    const val androidxComposeUiTool =
+        "androidx.activity:activity-compose:${Versions.androidxCompose}"
+    const val androidxComposeLifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.androidxComposeLifecycleViewModel}"
+    const val androidxComposeHilt =
+        "androidx.hilt:hilt-navigation-compose:${Versions.androidxComposeHilt}"
 
     const val junit = "junit:junit:${Versions.junit}"
 }
