@@ -1,18 +1,20 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdkVersion(Apps.compileSdk)
+    compileSdk = Apps.compileSdk
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
         applicationId = "com.github.siseong.art"
-        minSdkVersion(Apps.minSdk)
-        targetSdkVersion(Apps.targetSdk)
-        versionCode(Apps.versionCode)
-        versionName(Apps.versionName)
+        minSdk = Apps.minSdk
+        targetSdk = Apps.targetSdk
+        versionCode = Apps.versionCode
+        versionName = Apps.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

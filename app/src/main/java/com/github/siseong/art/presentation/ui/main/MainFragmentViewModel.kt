@@ -5,8 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.github.siseong.art.domain.entity.App
 import com.github.siseong.art.domain.repository.AppRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class MainFragmentViewModel(
+@HiltViewModel
+class MainFragmentViewModel @Inject constructor(
     appRepository: AppRepository
 ) : ViewModel() {
 

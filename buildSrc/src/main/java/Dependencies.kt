@@ -7,9 +7,9 @@ object Apps {
 }
 
 object Versions {
-    const val gradle = "4.1.3"
+    const val androidGradle = "7.0.0"
 
-    const val kotlin = "1.4.32"
+    const val kotlinGradlePlugin = "1.5.30"
     const val kotlinxCoroutinesCore = "1.4.3"
 
     const val androidMaterial = "1.3.0"
@@ -29,7 +29,7 @@ object Versions {
 object Deps {
     const val javaxInject = "javax.inject:javax.inject:1"
 
-    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinGradlePlugin}"
     const val kotlinxCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinxCoroutinesCore}"
 
     const val androidMaterial = "com.google.android.material:material:${Versions.androidMaterial}"

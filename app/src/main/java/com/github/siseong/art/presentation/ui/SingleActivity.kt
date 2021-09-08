@@ -3,7 +3,9 @@ package com.github.siseong.art.presentation.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.siseong.art.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SingleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

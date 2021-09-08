@@ -1,16 +1,19 @@
 buildscript {
     repositories {
+        jcenter()
         google()
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:${Versions.gradle}")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
+        classpath("com.android.tools.build:gradle:7.0.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.androidHilt}")
     }
 }
 
 allprojects {
     repositories {
+        jcenter()
         google()
         jcenter()
     }

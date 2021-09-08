@@ -5,14 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.github.siseong.art.data.AppRepositoryImpl
 import com.github.siseong.art.databinding.MainFragmentLayoutBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment: Fragment() {
 
-    private val viewModel: MainFragmentViewModel = MainFragmentViewModel(
-        AppRepositoryImpl()
-    )
+    private val viewModel: MainFragmentViewModel by viewModels()
     lateinit var binding: MainFragmentLayoutBinding
 
     override fun onCreateView(
