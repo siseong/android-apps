@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.github.siseong.art.presentation.ui.main.MainFragment"
+        android:name="com.github.siseong.art.presentation.ui.main.MainView"
         android:label="MainFragment" />
 </navigation>
