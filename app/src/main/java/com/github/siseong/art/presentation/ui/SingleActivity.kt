@@ -1,20 +1,23 @@
 package com.github.siseong.art.presentation.ui
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
-import com.github.siseong.art.presentation.ui.main.AppsPreview
+import androidx.compose.material.Surface
+import com.github.siseong.art.presentation.ui.apps.AppsPreview
+import com.github.siseong.art.presentation.ui.apps.theme.AppsTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalFoundationApi
 @AndroidEntryPoint
-class SingleActivity : AppCompatActivity() {
-
+class SingleActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppsPreview()
+            AppsTheme {
+                AppsPreview()
+            }
         }
     }
 }
