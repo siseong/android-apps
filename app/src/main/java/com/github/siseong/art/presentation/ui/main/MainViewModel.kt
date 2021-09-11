@@ -9,5 +9,5 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     appRepository: AppRepository
 ) : ViewModel() {
-
+    val apps = appRepository.getAppsFlow()
 }
