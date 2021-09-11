@@ -10,7 +10,7 @@ object Versions {
     const val androidGradle = "7.0.0"
 
     const val kotlinGradlePlugin = "1.5.21"
-    const val kotlinxCoroutinesCore = "1.4.3"
+    const val kotlinxCoroutinesCore = "1.5.1"
 
     const val androidMaterial = "1.3.0"
     const val androidCoreKtx = "1.5.0-rc01"
