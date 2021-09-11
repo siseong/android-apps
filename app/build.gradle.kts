@@ -83,7 +83,7 @@ dependencies {
     implementation(Deps.androidxComposeMaterial)
     implementation(Deps.androidxComposeAnimation)
     implementation(Deps.androidxComposeActivity)
-    implementation(Deps.androidxComposeUiTool)
+    implementation(Deps.androidxComposeUiToolingPreview)
     implementation(Deps.androidxComposeLifecycleViewModel)
     implementation(Deps.androidxComposeHilt)
 

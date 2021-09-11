@@ -73,12 +73,14 @@ object Deps {
     const val androidxHiltCompiler = "androidx.hilt:hilt-compiler:${Versions.androidxHilt}"
 
     const val androidxComposeUi = "androidx.compose.ui:ui:${Versions.androidxCompose}"
-    const val androidxComposeMaterial = "androidx.compose.material:material:${Versions.androidxCompose}"
-    const val androidxComposeAnimation = "androidx.compose.animation:animation:${Versions.androidxCompose}"
+    const val androidxComposeMaterial =
+        "androidx.compose.material:material:${Versions.androidxCompose}"
+    const val androidxComposeAnimation =
+        "androidx.compose.animation:animation:${Versions.androidxCompose}"
     const val androidxComposeActivity =
         "androidx.activity:activity-compose:${Versions.androidxActivityCompose}"
-    const val androidxComposeUiTool =
-        "androidx.activity:activity-compose:${Versions.androidxCompose}"
+    const val androidxComposeUiToolingPreview =
+        "androidx.compose.ui:ui-tooling:${Versions.androidxCompose}"
     const val androidxComposeLifecycleViewModel =
         "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.androidxComposeLifecycleViewModel}"
     const val androidxComposeHilt =
