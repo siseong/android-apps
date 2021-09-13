@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Art Work</string>
-    <string name="title_activity_single">SingleActivity</string>
+    <string name="app_name">App Mock</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.

@@ -19,6 +19,7 @@ package com.github.siseong.art.presentation.ui.apps.theme
 import android.annotation.SuppressLint
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Shapes
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
@@ -40,11 +41,11 @@ private val DarkColors = darkColors(
 
 @Composable
 fun AppsTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     MaterialTheme(
-        colors = if (darkTheme) DarkColors else LightColors,
+        colors = if (isSystemInDarkTheme()) DarkColors else LightColors,
+        shapes = appPreviewShapes,
         content = content
     )
 }
