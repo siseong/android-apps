@@ -29,6 +29,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -51,6 +52,7 @@ import com.github.siseong.art.presentation.ui.apps.theme.appPreviewShapes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -64,6 +66,16 @@ fun AppsPreview(
     val state: LazyListState = rememberLazyListState()
     val appPreviewScope = rememberCoroutineScope()
     var visibleApps by remember { mutableStateOf(listOf<Int>()) }
+    val column by remember {
+        derivedStateOf {
+            when (state.layoutInfo.totalItemsCount) {
+                0 -> 0
+                else -> {
+                    appList.size / state.layoutInfo.totalItemsCount + if (appList.size % state.layoutInfo.totalItemsCount > 0) 1 else 0
+                }
+            }
+        }
+    }
 
     Log.d("TAG", visibleApps.toString())
 
@@ -76,33 +88,29 @@ fun AppsPreview(
             .background(MaterialTheme.colors.background)
             .padding(horizontal = 1.dp, vertical = 5.dp)
     ) {
-        var column = when (state.layoutInfo.totalItemsCount) {
-            0 -> 0
-            else -> {
-                appList.size / state.layoutInfo.totalItemsCount + if (appList.size % state.layoutInfo.totalItemsCount > 0) 1 else 0
-            }
-        }
 
         appPreviewScope.launch(Dispatchers.IO) {
 
-            val initJob = launch {
+            val initJob = launch(Dispatchers.IO) {
                 delay(100)
                 visibleApps = appList.indices.toList()
             }
 
-            state.interactionSource.interactions.collect { interaction ->
-                Log.d("TAG", "interaction")
-                if (interaction is DragInteraction) {
+            state.interactionSource.interactions
+                .filter { it is DragInteraction.Stop }
+                .collect { _ ->
                     if (initJob.isActive) initJob.cancel()
-                    visibleApps =
-                        state.layoutInfo.visibleItemsInfo.fold(mutableListOf()) { result, info ->
-                            result.also {
-                                it.addAll((info.index * column until (info.index + 1) * column))
-                            }
+                    state.layoutInfo.visibleItemsInfo.fold(mutableListOf<Int>()) { result, info ->
+                        result.also {
+                            it.addAll((info.index * column until (info.index + 1) * column))
                         }
+                    }.let { newList ->
+                        if (visibleApps != newList) {
+                            visibleApps = newList
+                        }
+                    }
+                    Log.d("TAG", visibleApps.toString())
                 }
-                Log.d("TAG", visibleApps.toString())
-            }
         }
 
         itemsIndexed(appList) { index, app ->
@@ -115,16 +123,10 @@ fun AppsPreview(
                 AnimatedVisibility(
                     visible = visibleApps.contains(index),
                     enter = fadeIn(
-                        animationSpec = tween(
-                            durationMillis = 100,
-                            delayMillis = 100
-                        )
+                        animationSpec = tween(durationMillis = 100, delayMillis = 100)
                     ) + expandIn(),
                     exit = fadeOut(
-                        animationSpec = tween(
-                            durationMillis = 100,
-                            delayMillis = 100
-                        )
+                        animationSpec = tween(durationMillis = 100, delayMillis = 100)
                     ) + shrinkOut(),
                     modifier = Modifier.fillMaxSize()
                 ) {

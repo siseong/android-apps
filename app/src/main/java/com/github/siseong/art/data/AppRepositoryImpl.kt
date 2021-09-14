@@ -74,6 +74,21 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
                         "Spend less. Smile more.",
                         ImageSource.LocalImage(R.drawable.amazon)
                     ),
+                    App(
+                        "Spotify",
+                        "Enjoy ad-free music listening, offline playback, and more.",
+                        ImageSource.LocalImage(R.drawable.spotify)
+                    ),
+                    App(
+                        "SnapChat",
+                        "Easily talk with friends, view Live Stories from around the world, and explore news in Discover.",
+                        ImageSource.LocalImage(R.drawable.snapchat)
+                    ),
+                    App(
+                        "ArtWork",
+                        "Illustrations, photographs, or other nontextual material prepared for inclusion in a publication.",
+                        ImageSource.LocalImage(R.drawable.amazon)
+                    ),
                 )
             )
         }
