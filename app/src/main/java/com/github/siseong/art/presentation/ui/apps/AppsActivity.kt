@@ -1,4 +1,4 @@
-package com.github.siseong.art.presentation.ui
+package com.github.siseong.art.presentation.ui.apps
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalFoundationApi
 @AndroidEntryPoint
-class SingleActivity : ComponentActivity() {
+class AppsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

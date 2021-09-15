@@ -39,6 +39,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -184,10 +185,10 @@ fun AppTitle(
 ) {
     Text(
         text = title,
-        color = MaterialTheme.colors.onPrimary,
+        color = Color.White,
         style = LocalTextStyle.current.copy(
             shadow = Shadow(
-                color = MaterialTheme.colors.primary,
+                color = Color.Black,
                 offset = Offset(0f, 0f),
                 blurRadius = 8f
             ),

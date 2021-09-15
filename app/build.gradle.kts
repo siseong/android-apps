@@ -88,5 +88,8 @@ dependencies {
     implementation(Deps.androidxComposeLifecycleViewModel)
     implementation(Deps.androidxComposeHilt)
 
+    implementation(Deps.mavericks)
+    implementation(Deps.mavericksCompose)
+
     testImplementation(Deps.junit)
 }

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Apps">
 
         <activity
-            android:name="com.github.siseong.art.presentation.ui.SingleActivity"
+            android:name="com.github.siseong.art.presentation.ui.apps.AppsActivity"
             android:exported="true"
             android:theme="@style/Theme.Apps">
             <intent-filter>

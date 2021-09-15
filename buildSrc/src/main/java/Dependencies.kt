@@ -32,6 +32,9 @@ object Versions {
     const val androidxComposeLifecycleViewModel = "1.0.0-alpha07"
     const val androidxComposeHilt = "1.0.0-alpha02"
 
+    const val mavericks = "2.1.0"
+    const val mavericksCompose = "2.1.0-alpha01"
+
     const val junit = "4.13.2"
 }
 
@@ -86,5 +89,8 @@ object Deps {
     const val androidxComposeHilt =
         "androidx.hilt:hilt-navigation-compose:${Versions.androidxComposeHilt}"
 
-    const val junit = "junit:junit:${Versions.junit}"
+    const val mavericks = "com.airbnb.android:mavericks:${Versions.mavericks}"
+    const val mavericksCompose = "com.airbnb.android:mavericks-compose:${Versions.mavericksCompose}"
+
+        const val junit = "junit:junit:${Versions.junit}"
 }
