@@ -13,14 +13,14 @@
 
         <activity
             android:name="com.github.siseong.art.presentation.ui.apps.AppsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Apps">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.ui.instagram.InstagramActivity" />
     </application>
 
 </manifest>

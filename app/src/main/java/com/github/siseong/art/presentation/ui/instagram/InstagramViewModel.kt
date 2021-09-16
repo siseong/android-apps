@@ -5,7 +5,7 @@ import com.airbnb.mvrx.MavericksViewModel
 class InstagramViewModel (
     initialState: InstagramActivityState
 ): MavericksViewModel<InstagramActivityState>(initialState) {
-    fun changeTab(tab: Tab) {
+    val onTabClick: (Tab) -> Unit = { tab ->
         setState { copy(selectedTab = tab) }
     }
 }

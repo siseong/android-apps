@@ -12,6 +12,7 @@ import androidx.compose.animation.shrinkOut
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -28,7 +29,6 @@ import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,10 +60,7 @@ import kotlinx.coroutines.launch
 @ExperimentalFoundationApi
 @Preview
 @Composable
-fun AppsPreview(
-    viewModel: AppsViewModel = viewModel()
-) {
-    val appList by viewModel.apps.collectAsState(initial = listOf())
+fun AppsPreview(apps: List<App>) {
     val state: LazyListState = rememberLazyListState()
     val appPreviewScope = rememberCoroutineScope()
     var visibleApps by remember { mutableStateOf(listOf<Int>()) }
@@ -72,7 +69,7 @@ fun AppsPreview(
             when (state.layoutInfo.totalItemsCount) {
                 0 -> 0
                 else -> {
-                    appList.size / state.layoutInfo.totalItemsCount + if (appList.size % state.layoutInfo.totalItemsCount > 0) 1 else 0
+                    apps.size / state.layoutInfo.totalItemsCount + if (apps.size % state.layoutInfo.totalItemsCount > 0) 1 else 0
                 }
             }
         }
@@ -94,7 +91,7 @@ fun AppsPreview(
 
             val initJob = launch(Dispatchers.IO) {
                 delay(100)
-                visibleApps = appList.indices.toList()
+                visibleApps = apps.indices.toList()
             }
 
             state.interactionSource.interactions
@@ -114,7 +111,7 @@ fun AppsPreview(
                 }
         }
 
-        itemsIndexed(appList) { index, app ->
+        itemsIndexed(apps) { index, app ->
             Box(
                 modifier = Modifier
                     .height(170.dp)
@@ -147,6 +144,7 @@ fun AppPreview(
         contentAlignment = Alignment.BottomCenter,
         modifier = Modifier
             .fillMaxSize()
+            .clickable{ app.onClick() }
     ) {
         AppImage(imageSource = app.imageSource, description = app.description)
         AppTitle(app.title)
