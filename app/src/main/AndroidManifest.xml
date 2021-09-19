@@ -3,7 +3,7 @@
     package="com.github.siseong.apps">
 
     <application
-        android:name="com.github.siseong.apps.presentation.AppsApplication"
+        android:name="com.github.siseong.apps.list.presentation.AppsApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Apps">
 
         <activity
-            android:name="com.github.siseong.apps.presentation.ui.apps.AppsActivity"
+            android:name="com.github.siseong.apps.list.presentation.ui.AppsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.github.siseong.apps.presentation.ui.instagram.InstagramActivity" />
+        <activity android:name="com.github.siseong.apps.instagram.presentation.ui.InstagramActivity" />
     </application>
 
 </manifest>
