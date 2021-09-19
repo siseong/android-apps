@@ -10,7 +10,7 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "com.github.siseong.art"
+        applicationId = "com.github.siseong.apps"
         minSdk = Apps.minSdk
         targetSdk = Apps.targetSdk
         versionCode = Apps.versionCode

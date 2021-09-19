@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.siseong.art">
+    package="com.github.siseong.apps">
 
     <application
-        android:name=".presentation.AppsApplication"
+        android:name="com.github.siseong.apps.presentation.AppsApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Apps">
 
         <activity
-            android:name="com.github.siseong.art.presentation.ui.apps.AppsActivity"
+            android:name="com.github.siseong.apps.presentation.ui.apps.AppsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.ui.instagram.InstagramActivity" />
+        <activity android:name="com.github.siseong.apps.presentation.ui.instagram.InstagramActivity" />
     </application>
 
 </manifest>
