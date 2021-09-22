@@ -32,8 +32,8 @@ object Versions {
     const val androidxComposeLifecycleViewModel = "1.0.0-alpha07"
     const val androidxComposeHilt = "1.0.0-alpha02"
 
-    const val mavericks = "2.1.0"
-    const val mavericksCompose = "2.1.0-alpha01"
+    const val mavericks = "2.3.0"
+    const val mavericksCompose = "2.1.0-alpha02"
 
     const val junit = "4.13.2"
 }
