@@ -1,7 +1,7 @@
-package com.github.siseong.apps.instagram.presentation.ui
+package com.github.siseong.apps.instagram.domain.post
 
-import com.github.siseong.apps.instagram.domain.Comment
-import com.github.siseong.apps.instagram.domain.Medium
+import com.github.siseong.apps.instagram.domain.common.Comment
+import com.github.siseong.apps.instagram.domain.common.Medium
 
 data class Post(
     val authorName: String,

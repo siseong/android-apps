@@ -1,11 +1,11 @@
-package com.github.siseong.apps.instagram.presentation.ui
+package com.github.siseong.apps.instagram.domain
 
 import com.airbnb.mvrx.MavericksState
 import com.github.siseong.apps.R
 
 data class InstagramActivityState(
     val selectedTab: Tab
-): MavericksState
+) : MavericksState
 
 enum class Tab(
     val checkedDrawableRes: Int,

@@ -1,6 +1,6 @@
-package com.github.siseong.apps.instagram.domain
+package com.github.siseong.apps.instagram.domain.common
 
-data class Profile (
+data class Profile(
     val name: String,
     val username: String,
     val imagePath: String,

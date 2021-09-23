@@ -1,13 +1,14 @@
 package com.github.siseong.apps.instagram.presentation.ui
 
-import com.airbnb.mvrx.MavericksStateFactory
 import com.airbnb.mvrx.MavericksViewModel
 import com.airbnb.mvrx.MavericksViewModelFactory
 import com.airbnb.mvrx.ViewModelContext
+import com.github.siseong.apps.instagram.domain.InstagramActivityState
+import com.github.siseong.apps.instagram.domain.Tab
 
-class InstagramViewModel (
+class InstagramViewModel(
     initialState: InstagramActivityState
-): MavericksViewModel<InstagramActivityState>(initialState) {
+) : MavericksViewModel<InstagramActivityState>(initialState) {
     val onTabClick: (Tab) -> Unit = { tab ->
         setState { copy(selectedTab = tab) }
     }
