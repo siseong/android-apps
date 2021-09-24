@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
@@ -17,7 +18,6 @@ fun BottomNavigationView(tab: State<Tab>, onTabClick: (Tab) -> Unit) {
     Row(
         horizontalArrangement = Arrangement.SpaceAround,
         modifier = Modifier
-            .background(Color.Black)
             .fillMaxWidth()
             .height(45.dp),
     ) {

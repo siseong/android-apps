@@ -2,6 +2,7 @@ package com.github.siseong.apps.instagram.presentation.ui.profile
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,7 +17,7 @@ fun Profile() {
     ) {
         Text(
             text = "Profile",
-            color = Color.White
+            color = MaterialTheme.colors.onBackground
         )
     }
 }

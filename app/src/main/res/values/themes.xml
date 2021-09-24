@@ -20,5 +20,6 @@
     <style name="Theme.Material.DayNight.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
     </style>
 </resources>
