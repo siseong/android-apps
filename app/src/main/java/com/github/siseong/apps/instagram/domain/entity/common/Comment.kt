@@ -1,4 +1,4 @@
-package com.github.siseong.apps.instagram.domain.common
+package com.github.siseong.apps.instagram.domain.entity.common
 
 data class Comment(
     val profile: Profile,

@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.airbnb.mvrx.compose.collectAsState
 import com.airbnb.mvrx.compose.mavericksViewModel
-import com.github.siseong.apps.instagram.domain.Tab
+import com.github.siseong.apps.instagram.presentation.entity.Tab
 import com.github.siseong.apps.instagram.presentation.ui.home.Home
 import com.github.siseong.apps.instagram.presentation.ui.profile.Profile
 import com.github.siseong.apps.instagram.presentation.ui.reels.Reels
