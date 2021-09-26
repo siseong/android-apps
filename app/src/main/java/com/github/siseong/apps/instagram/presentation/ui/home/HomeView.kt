@@ -1,11 +1,9 @@
-package com.github.siseong.apps.instagram.presentation.ui.post
+package com.github.siseong.apps.instagram.presentation.ui.home
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -16,8 +14,8 @@ import com.airbnb.mvrx.compose.mavericksViewModel
 import com.github.siseong.apps.R
 
 @Composable
-fun Post() {
-    val viewModel: PostViewModel = mavericksViewModel()
+fun Home() {
+    val viewModel: HomeViewModel = mavericksViewModel()
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -44,7 +42,7 @@ fun Post() {
         Box(
             modifier = Modifier.weight(1f)
         ) {
-            PostBody(viewModel.collectAsState { it.count.toString() }.value)
+            HomeBody(viewModel.collectAsState { it.count.toString() }.value)
         }
     }
 }

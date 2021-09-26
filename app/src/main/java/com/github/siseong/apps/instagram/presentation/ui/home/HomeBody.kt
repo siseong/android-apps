@@ -1,6 +1,7 @@
-package com.github.siseong.apps.instagram.presentation.ui.post
+package com.github.siseong.apps.instagram.presentation.ui.home
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -9,9 +10,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun PostBody(
+fun HomeBody(
     count: String,
 ) {
+    Column {
+
+    }
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()

@@ -1,27 +1,15 @@
-package com.github.siseong.apps.instagram.presentation.ui.post
+package com.github.siseong.apps.instagram.presentation.ui.home
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import com.airbnb.mvrx.MavericksState
 import com.airbnb.mvrx.MavericksViewModel
 import com.airbnb.mvrx.MavericksViewModelFactory
 import com.airbnb.mvrx.ViewModelContext
-import com.github.siseong.apps.instagram.domain.InstagramActivityState
-import com.github.siseong.apps.instagram.domain.Tab
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class PostViewModel(
+class HomeViewModel(
     initialState: CountState
 ) : MavericksViewModel<CountState>(initialState) {
 
@@ -37,14 +25,14 @@ class PostViewModel(
         }
     }
 
-    companion object : MavericksViewModelFactory<PostViewModel, CountState> {
+    companion object : MavericksViewModelFactory<HomeViewModel, CountState> {
 
         override fun initialState(viewModelContext: ViewModelContext): CountState {
             return CountState(0)
         }
 
-        override fun create(viewModelContext: ViewModelContext, state: CountState): PostViewModel {
-            return PostViewModel(state)
+        override fun create(viewModelContext: ViewModelContext, state: CountState): HomeViewModel {
+            return HomeViewModel(state)
         }
     }
 }
