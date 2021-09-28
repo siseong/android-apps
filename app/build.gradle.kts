@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk = Apps.compileSdk
-    buildToolsVersion = "30.0.3"
+    buildToolsVersion = "31.0.0"
 
     defaultConfig {
         applicationId = "com.github.siseong.apps"

@@ -16,6 +16,6 @@ fun Home() {
         modifier = Modifier.fillMaxSize()
     ) {
         TopAppBar()
-        MyHighlights()
+        HomeStories()
     }
 }

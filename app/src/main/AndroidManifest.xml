@@ -20,7 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.github.siseong.apps.instagram.presentation.ui.InstagramActivity" />
+
+        <activity
+            android:name="com.github.siseong.apps.instagram.presentation.ui.InstagramActivity"
+            android:theme="@style/Theme.Apps" />
+
     </application>
 
 </manifest>
