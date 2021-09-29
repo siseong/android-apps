@@ -18,6 +18,7 @@ object Versions {
 
     const val androidxActivityKtx = "1.3.1"
     const val androidxFragmentKtx = "1.3.6"
+    const val androidxCoreSplashScreen = "1.0.0-alpha01"
 
     const val androidxLifeCycle = "2.2.0"
 
@@ -51,6 +52,7 @@ object Deps {
 
     const val androidxActivityKtx = "androidx.activity:activity-ktx:${Versions.androidxActivityKtx}"
     const val androidxFragmentKtx = "androidx.fragment:fragment-ktx:${Versions.androidxFragmentKtx}"
+    const val androidxCoreSplashScreen = "androidx.core:core-splashscreen:${Versions.androidxCoreSplashScreen}"
 
     const val androidxLifeCycleViewModelKtx =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidxLifeCycle}"

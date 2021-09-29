@@ -8,22 +8,21 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Apps">
+        android:supportsRtl="true">
 
         <activity
             android:name="com.github.siseong.apps.list.presentation.ui.AppsActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Apps.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
             android:name="com.github.siseong.apps.instagram.presentation.ui.InstagramActivity"
-            android:theme="@style/Theme.Apps" />
+            android:theme="@style/Theme.Apps.Instagram" />
 
     </application>
 

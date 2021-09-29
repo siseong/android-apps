@@ -6,7 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.github.siseong.apps.instagram.presentation.ui.theme.PostTheme
 
-class InstagramActivity: ComponentActivity() {
+class InstagramActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

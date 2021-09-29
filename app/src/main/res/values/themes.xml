@@ -13,11 +13,22 @@
   the License.
   -->
 <resources>
+
     <style name="Theme.Apps" parent="Theme.Material.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/apps_status_bar</item>
         <item name="android:navigationBarColor">@color/apps_navigation_bar</item>
     </style>
-    <style name="Theme.Material.DayNight.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" >
+
+    <style name="Theme.Apps.Instagram" parent="Theme.Apps" />
+
+    <style name="Theme.Apps.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/apps_status_bar</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Apps</item>
+    </style>
+
+    <style name="Theme.Material.DayNight.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowBackground">@android:color/white</item>

@@ -64,6 +64,7 @@ dependencies {
 
     implementation(Deps.androidxActivityKtx)
     implementation(Deps.androidxFragmentKtx)
+    implementation(Deps.androidxCoreSplashScreen)
 
     implementation(Deps.androidxLifeCycleViewModelKtx)
     implementation(Deps.androidxLifeCycleRunTimeKtx)
