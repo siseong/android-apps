@@ -14,13 +14,15 @@ import com.github.siseong.apps.R
 @Composable
 fun TopAppBar() {
     Row(
-        modifier = Modifier.height(60.dp)
+        modifier = Modifier
+            .padding(bottom = 7.dp)
+            .height(62.dp)
             .fillMaxWidth()
     ) {
         Image(
             painter = painterResource(R.drawable.instagram_logo),
             contentDescription = "Instagram logo",
-            modifier = Modifier.padding(horizontal = 15.dp, vertical = 15.dp)
+            modifier = Modifier.padding(top = 18.dp, bottom = 12.dp, start = 15.dp)
         )
         Row(
             horizontalArrangement = Arrangement.End,

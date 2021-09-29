@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.github.siseong.apps.instagram.presentation.entity.Tab
@@ -16,7 +18,9 @@ fun BottomNavigationView(tab: State<Tab>, onTabClick: (Tab) -> Unit) {
         horizontalArrangement = Arrangement.SpaceAround,
         modifier = Modifier
             .fillMaxWidth()
-            .height(45.dp),
+            .height(50.dp)
+            .shadow(elevation = 0.1.dp, RectangleShape, true)
+            .padding(3.dp)
     ) {
         BottomItem(Tab.HOME, tab.value, onTabClick)
         BottomItem(Tab.SEARCH, tab.value, onTabClick)

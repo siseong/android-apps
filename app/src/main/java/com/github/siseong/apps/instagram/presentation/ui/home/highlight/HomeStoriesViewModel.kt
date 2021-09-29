@@ -34,7 +34,7 @@ class HomeStoriesViewModel(
                     Story(
                         title = "title1",
                         author = Author(
-                            "name1",
+                            "WebToon",
                             Image(MediumSource.Local(R.drawable.ic_profile_checked))
                         ),
                         thumbnailImage = Image(MediumSource.Local(R.drawable.kakao_webtoon)),
@@ -62,6 +62,114 @@ class HomeStoriesViewModel(
                             Image(MediumSource.Local(R.drawable.ic_profile_checked))
                         ),
                         thumbnailImage = Image(MediumSource.Local(R.drawable.zoom)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "Amazon",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.amazon)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "Spotify",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.spotify)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "TikTok",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.tiktok)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "YouTube",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.youtube)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "Chrome",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.chrome)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "GoogleMap",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.googlemap)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "Telegram",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.telegram)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "Snapchat",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.snapchat)),
+                        video = Video(
+                            MediumSource.Remote(""),
+                            timeLengthSec = 60
+                        )
+                    ),
+                    Story(
+                        title = "title1",
+                        author = Author(
+                            "LinkedIn",
+                            Image(MediumSource.Local(R.drawable.ic_profile_checked))
+                        ),
+                        thumbnailImage = Image(MediumSource.Local(R.drawable.linkedin)),
                         video = Video(
                             MediumSource.Remote(""),
                             timeLengthSec = 60
