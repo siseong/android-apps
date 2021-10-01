@@ -5,7 +5,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -14,15 +17,15 @@ import com.github.siseong.apps.R
 @Composable
 fun TopAppBar() {
     Row(
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
-            .padding(bottom = 7.dp)
-            .height(62.dp)
             .fillMaxWidth()
+            .height(55.dp)
     ) {
         Image(
             painter = painterResource(R.drawable.instagram_logo),
             contentDescription = "Instagram logo",
-            modifier = Modifier.padding(top = 18.dp, bottom = 12.dp, start = 15.dp)
+            modifier = Modifier.padding(top = 15.dp, bottom = 9.dp, start = 15.dp)
         )
         Row(
             horizontalArrangement = Arrangement.End,
@@ -52,6 +55,6 @@ fun MenuItem(
         modifier = Modifier
             .clickable { onClick() }
             .size(width = 50.dp, height = 60.dp)
-            .padding(horizontal = 12.dp, vertical = 15.dp)
+            .padding(12.dp)
     )
 }

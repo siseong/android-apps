@@ -32,7 +32,7 @@ private val LightColors = lightColors(
     secondaryVariant = Blue700,
     surface = Blue300,
     onSurface = Color.White,
-    background = Color.Transparent,
+    background = Color.White,
     onBackground = Color.Black
 )
 
@@ -43,12 +43,12 @@ private val DarkColors = darkColors(
     secondary = Gray300,
     secondaryVariant = Blue700,
     surface = Blue300,
-    background = Color.Transparent,
+    background = Color.Black,
     onBackground = Color.White
 )
 
 @Composable
-fun PostTheme(
+fun InstagramTheme(
     content: @Composable () -> Unit,
 ) {
     MaterialTheme(

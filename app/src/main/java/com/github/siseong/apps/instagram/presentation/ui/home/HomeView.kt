@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import com.airbnb.mvrx.compose.mavericksViewModel
 import com.github.siseong.apps.instagram.presentation.ui.home.appbar.AppBarViewModel
 import com.github.siseong.apps.instagram.presentation.ui.home.appbar.TopAppBar
+import com.github.siseong.apps.instagram.presentation.ui.home.highlight.HomeStories
 
 @Composable
 fun Home() {
