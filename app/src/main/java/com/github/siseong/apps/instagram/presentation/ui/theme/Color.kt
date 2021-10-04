@@ -18,6 +18,7 @@ package com.github.siseong.apps.instagram.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val Blue100 = Color(0xffe2eefb)
 val Blue300 = Color(0xff03a9f4)
-val Blue700 = Color(0xff006064)
+val Blue700 = Color(0xff133463)
 val Gray300 = Color(0xffe0e0e0)

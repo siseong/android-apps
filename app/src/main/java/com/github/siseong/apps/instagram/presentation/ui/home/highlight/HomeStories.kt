@@ -128,7 +128,7 @@ fun FriendStory(
                 modifier = Modifier
                     .clip(CircleShape)
                     .size(60.dp)
-                    .border(0.2.dp, MaterialTheme.colors.onBackground, CircleShape)
+                    .border(0.3.dp, MaterialTheme.colors.onBackground, CircleShape)
                     .align(Alignment.Center)
             )
         }

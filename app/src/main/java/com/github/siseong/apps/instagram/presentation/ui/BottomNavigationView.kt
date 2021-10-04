@@ -1,12 +1,14 @@
 package com.github.siseong.apps.instagram.presentation.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -18,9 +20,8 @@ fun BottomNavigationView(tab: State<Tab>, onTabClick: (Tab) -> Unit) {
         horizontalArrangement = Arrangement.SpaceAround,
         modifier = Modifier
             .fillMaxWidth()
-            .height(50.dp)
+            .wrapContentHeight()
             .shadow(elevation = 0.1.dp, RectangleShape, true)
-            .padding(3.dp)
     ) {
         BottomItem(Tab.HOME, tab.value, onTabClick)
         BottomItem(Tab.SEARCH, tab.value, onTabClick)
@@ -39,9 +40,9 @@ fun BottomItem(
     Image(
         painter = painterResource(id = if (tab == selectedTab) tab.checkedDrawableRes else tab.uncheckedDrawableRes),
         contentDescription = tab.name,
-        modifier = Modifier.fillMaxHeight()
+        modifier = Modifier
             .clickable { onClick(tab) }
-            .width(65.dp)
-            .padding(8.dp),
+            .size(height = 45.dp, width = 65.dp)
+            .padding(8.dp)
     )
 }

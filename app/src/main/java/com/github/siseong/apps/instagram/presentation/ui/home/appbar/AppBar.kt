@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,7 +31,7 @@ fun TopAppBar() {
                 .fillMaxHeight()
         ) {
             MenuItem(R.drawable.ic_instagram_add, "add") { }
-            MenuItem(R.drawable.ic_instagram_activity, "activity") {}
+            MenuItem(R.drawable.ic_instagram_like, "activity") {}
             MenuItem(R.drawable.ic_instagram_message, "message") {}
         }
     }

@@ -5,4 +5,35 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="instagram_count_like">%s likes</string>
+    <string name="instaram">Instagram</string>
+    <string name="instaram_description"><![CDATA[A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.]]></string>
+    <string name="kakao_webtoon">KaKao Webtoon</string>
+    <string name="kakao_webtoon_description">Meet the webtoon</string>
+    <string name="zoom">Zoom</string>
+    <string name="zoom_description">Zoom\'s secure, reliable video platform powers all of your communication needs, including meetings, chat, phone, webinars, and online events.</string>
+    <string name="linkdin">Linkedin</string>
+    <string name="linkedin_description">Manage your professional identity.</string>
+    <string name="google_map">Google Map</string>
+    <string name="google_map_description">Get real-time navigation and more in the Maps app.</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Telegram is a cloud-based mobile and desktop messaging app.</string>
+    <string name="netflix">Netflix</string>
+    <string name="netflix_description"><![CDATA[Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.]]></string>
+    <string name="google_calendar">Google Calendar</string>
+    <string name="google_calendar_description">Helps you spend less time managing your schedule and more time enjoying it.</string>
+    <string name="youtube">YouTube</string>
+    <string name="youtube_description">Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.</string>
+    <string name="chrome">Chrome</string>
+    <string name="chrome_description">Chrome is a fast, secure, free web browser.</string>
+    <string name="tiktok">TikTok</string>
+    <string name="tiktok_description">On a device or on the web, viewers can watch and discover millions of personalized short videos.</string>
+    <string name="amazon">Amazon</string>
+    <string name="amazon_description">Spend less. Smile more.</string>
+    <string name="spotify">Spotify</string>
+    <string name="spotify_description">Enjoy ad-free music listening, offline playback, and more.</string>
+    <string name="snapchat">SnapChat</string>
+    <string name="snachat_description">Easily talk with friends, view Live Stories from around the world, and explore news in Discover.</string>
+    <string name="artwork">ArtWork</string>
+    <string name="artwork_description">Illustrations, photographs, or other nontextual material prepared for inclusion in a publication.</string>
 </resources>
