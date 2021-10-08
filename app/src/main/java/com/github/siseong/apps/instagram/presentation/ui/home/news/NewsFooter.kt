@@ -1,12 +1,20 @@
 package com.github.siseong.apps.instagram.presentation.ui.home.news
 
 import android.text.format.DateFormat
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
@@ -23,10 +31,12 @@ import java.util.concurrent.TimeUnit
 @Composable
 fun NewsFooter() {
     Column(
+        verticalArrangement = Arrangement.spacedBy(3.dp),
         modifier = Modifier.padding(horizontal = 13.dp)
     ) {
         NewsLike()
         NewsComments()
+        AddComment()
         NewsDate(System.currentTimeMillis() - TimeUnit.HOURS.toMillis(3))
     }
 }
@@ -93,6 +103,36 @@ fun NewsComment() {
             }
         }
     )
+}
+
+const val heart = 0x2764.toChar()
+
+@Composable
+fun AddComment() {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth()
+            .height(40.dp)
+    ) {
+        Image(
+            painter = painterResource(R.drawable.instagram),
+            contentDescription = "profile",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(25.dp)
+                .clip(CircleShape)
+        )
+        Text(
+            text = stringResource(R.string.instagram_add_comment),
+            color = MaterialTheme.colors.secondary,
+            fontSize = 14.sp,
+            modifier = Modifier.weight(1f)
+                .padding(start = 10.dp)
+        )
+        Text(
+            text = heart.toString()
+        )
+    }
 }
 
 @Composable

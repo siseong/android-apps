@@ -1,16 +1,12 @@
 package com.github.siseong.apps.instagram.presentation.ui.home
 
-import androidx.compose.foundation.border
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.scrollable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Divider
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -29,13 +25,35 @@ fun Home() {
         modifier = Modifier.fillMaxSize()
     ) {
         TopAppBar()
+        TopAppBarDivider(scrollState.value > 0)
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(scrollState)
         ) {
             HomeStories()
+            HomeStoryDivider()
             News()
         }
     }
 }
+
+@Composable
+fun TopAppBarDivider(
+    enabled: Boolean
+) {
+    Divider(
+        color = if (enabled) MaterialTheme.colors.onBackground else Color.Transparent,
+        thickness = 0.2.dp
+    )
+}
+
+@Composable
+fun HomeStoryDivider(
+) {
+    Divider(
+        color = MaterialTheme.colors.primaryVariant,
+        thickness = 0.2.dp
+    )
+}
+

@@ -36,4 +36,5 @@
     <string name="snachat_description">Easily talk with friends, view Live Stories from around the world, and explore news in Discover.</string>
     <string name="artwork">ArtWork</string>
     <string name="artwork_description">Illustrations, photographs, or other nontextual material prepared for inclusion in a publication.</string>
+    <string name="instagram_add_comment">Add a comment...</string>
 </resources>

@@ -61,7 +61,7 @@ fun NewsHeader() {
             text = "Author",
             color = MaterialTheme.colors.onBackground,
             modifier = Modifier.weight(1f)
-                .padding(start = 10.dp)
+                .padding(start = 8.dp)
         )
         Image(
             painter = painterResource(R.drawable.ic_more),
