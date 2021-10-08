@@ -8,7 +8,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -21,7 +23,8 @@ import com.github.siseong.apps.instagram.presentation.ui.home.news.News
 @Composable
 fun Home() {
     val viewModel: AppBarViewModel = mavericksViewModel()
-    val scrollableState = rememberScrollState()
+    val scrollState = rememberScrollState()
+
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -29,10 +32,7 @@ fun Home() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .scrollable(
-                    state = scrollableState,
-                    orientation = Orientation.Vertical
-                )
+                .verticalScroll(scrollState)
         ) {
             HomeStories()
             News()

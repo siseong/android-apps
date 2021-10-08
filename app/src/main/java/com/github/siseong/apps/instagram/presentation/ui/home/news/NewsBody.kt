@@ -13,7 +13,6 @@ import com.github.siseong.apps.R
 
 @Composable
 fun NewsBody() {
-    Column {
         Image(
             painter = painterResource(R.drawable.instagram),
             contentDescription = "NewImage",
@@ -69,9 +68,4 @@ fun NewsBody() {
                     .align(Alignment.CenterEnd)
             )
         }
-
-    }
-
-    // Images()
-    // ImageTail()
 }
