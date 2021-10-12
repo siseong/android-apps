@@ -1,7 +1,7 @@
 package com.github.siseong.apps.instagram.presentation.ui.home
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
@@ -10,15 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.airbnb.mvrx.compose.mavericksViewModel
-import com.github.siseong.apps.instagram.presentation.ui.home.appbar.AppBarViewModel
 import com.github.siseong.apps.instagram.presentation.ui.home.appbar.TopAppBar
 import com.github.siseong.apps.instagram.presentation.ui.home.highlight.HomeStories
-import com.github.siseong.apps.instagram.presentation.ui.home.news.News
+import com.github.siseong.apps.instagram.presentation.ui.home.news.HomeNews
 
 @Composable
 fun Home() {
-    val viewModel: AppBarViewModel = mavericksViewModel()
     val scrollState = rememberScrollState()
 
     Column(
@@ -33,7 +30,7 @@ fun Home() {
         ) {
             HomeStories()
             HomeStoryDivider()
-            News()
+            HomeNews()
         }
     }
 }

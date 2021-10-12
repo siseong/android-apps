@@ -16,9 +16,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.github.siseong.apps.R
+import com.github.siseong.apps.instagram.domain.entity.profile.Author
 
 @Composable
-fun NewsHeader() {
+fun NewsHeader(
+    author: Author
+) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()

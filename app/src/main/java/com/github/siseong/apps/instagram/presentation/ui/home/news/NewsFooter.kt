@@ -24,12 +24,15 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.github.siseong.apps.R
+import com.github.siseong.apps.instagram.domain.entity.common.Comment
 import java.text.NumberFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
 @Composable
-fun NewsFooter() {
+fun NewsFooter(
+    comments: List<Comment>
+) {
     Column(
         verticalArrangement = Arrangement.spacedBy(3.dp),
         modifier = Modifier.padding(horizontal = 13.dp)

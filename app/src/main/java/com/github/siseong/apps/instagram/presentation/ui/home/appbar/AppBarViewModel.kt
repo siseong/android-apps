@@ -3,8 +3,8 @@ package com.github.siseong.apps.instagram.presentation.ui.home.appbar
 import com.airbnb.mvrx.MavericksViewModel
 import com.airbnb.mvrx.MavericksViewModelFactory
 import com.airbnb.mvrx.ViewModelContext
+import com.github.siseong.apps.instagram.domain.entity.home.AppBarState
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

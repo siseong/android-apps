@@ -1,5 +1,6 @@
 package com.github.siseong.apps.instagram.presentation.ui.home.news
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
@@ -9,10 +10,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.github.siseong.apps.R
+import com.github.siseong.apps.instagram.domain.entity.common.Medium
 
 
 @Composable
-fun NewsBody() {
+fun NewsBody(
+    media: List<Medium>
+) {
     Column {
         NewsImages()
         NewsActions()

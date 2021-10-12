@@ -10,10 +10,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.airbnb.mvrx.compose.collectAsState
+import com.airbnb.mvrx.compose.mavericksViewModel
 import com.github.siseong.apps.R
 
 @Composable
 fun TopAppBar() {
+
+    val appBarViewModel: AppBarViewModel = mavericksViewModel()
+    val newActivity = appBarViewModel.collectAsState { it.newActivity }
+    val newMessage = appBarViewModel.collectAsState { it.newMessage }
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -31,8 +38,8 @@ fun TopAppBar() {
                 .fillMaxHeight()
         ) {
             MenuItem(R.drawable.ic_instagram_add, "add") { }
-            MenuItem(R.drawable.ic_instagram_like, "activity") {}
-            MenuItem(R.drawable.ic_instagram_message, "message") {}
+            MenuItem(R.drawable.ic_instagram_like, "activity", isNew = newActivity.value) {}
+            MenuItem(R.drawable.ic_instagram_message, "message", newCount = newMessage.value) {}
         }
     }
 }

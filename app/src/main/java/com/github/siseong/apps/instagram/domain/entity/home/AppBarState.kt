@@ -1,4 +1,4 @@
-package com.github.siseong.apps.instagram.presentation.ui.home.appbar
+package com.github.siseong.apps.instagram.domain.entity.home
 
 import com.airbnb.mvrx.MavericksState
 
