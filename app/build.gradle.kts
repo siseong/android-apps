@@ -42,7 +42,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Apps.targetJvm
         freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
     }
 
@@ -52,7 +52,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
+    implementation(project(Module.common))
+    implementation(project(Module.instagram))
 
     implementation(Deps.javaxInject)
 

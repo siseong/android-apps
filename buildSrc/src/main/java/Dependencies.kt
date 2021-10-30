@@ -5,6 +5,7 @@ object Apps {
     const val versionCode = 1
     const val versionName = "1.0.0"
     const val buildToolsVersion = "31.0.0"
+    const val targetJvm = "1.8"
 }
 
 object Versions {
@@ -38,6 +39,11 @@ object Versions {
     const val mavericksCompose = "2.1.0-alpha02"
 
     const val junit = "4.13.2"
+}
+
+object Module {
+    const val common = ":common"
+    const val instagram = ":instagram"
 }
 
 object ClassPath {

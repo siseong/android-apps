@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="apps_status_bar">#ffffff</color>
+    <color name="apps_navigation_bar">#ffffff</color>
+</resources>

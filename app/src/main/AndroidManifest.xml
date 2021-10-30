@@ -3,7 +3,7 @@
     package="com.github.siseong.apps">
 
     <application
-        android:name="com.github.siseong.apps.list.presentation.AppsApplication"
+        android:name="com.github.siseong.apps.presentation.AppsApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,7 +11,7 @@
         android:supportsRtl="true">
 
         <activity
-            android:name="com.github.siseong.apps.list.presentation.ui.AppsActivity"
+            android:name="com.github.siseong.apps.presentation.ui.AppsActivity"
             android:exported="true"
             android:theme="@style/Theme.Apps.Starting">
             <intent-filter>
@@ -19,11 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.github.siseong.apps.instagram.presentation.ui.InstagramActivity"
-            android:theme="@style/Theme.Apps.Instagram" />
-
     </application>
 
 </manifest>
