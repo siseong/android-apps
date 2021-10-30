@@ -1,4 +1,4 @@
-package com.github.siseong.apps.list.domain
+package com.github.siseong.apps.common
 
 sealed class Result<out T> {
     data class Success<out T>(val data: T) : Result<T>()

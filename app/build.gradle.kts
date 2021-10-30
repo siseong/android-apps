@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk = Apps.compileSdk
-    buildToolsVersion = "31.0.0"
+    buildToolsVersion = Apps.buildToolsVersion
 
     defaultConfig {
         applicationId = "com.github.siseong.apps"
@@ -52,6 +52,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
+
     implementation(Deps.javaxInject)
 
     implementation(Deps.kotlinStdLib)

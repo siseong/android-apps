@@ -4,9 +4,9 @@ buildscript {
         google()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}")
-        classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.androidHilt}")
+        classpath(ClassPath.androidGradle)
+        classpath(ClassPath.kotlinGradlePlugin)
+        classpath(ClassPath.androidHiltGradlePlugin)
     }
 }
 

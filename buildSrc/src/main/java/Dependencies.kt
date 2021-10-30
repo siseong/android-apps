@@ -4,10 +4,11 @@ object Apps {
     const val targetSdk = 31
     const val versionCode = 1
     const val versionName = "1.0.0"
+    const val buildToolsVersion = "31.0.0"
 }
 
 object Versions {
-    const val androidGradle = "7.0.0"
+    const val androidGradle = "7.0.2"
 
     const val kotlinGradlePlugin = "1.5.21"
     const val kotlinxCoroutinesCore = "1.5.1"
@@ -39,6 +40,14 @@ object Versions {
     const val junit = "4.13.2"
 }
 
+object ClassPath {
+    const val androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
+    const val kotlinGradlePlugin =
+        "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}"
+    const val androidHiltGradlePlugin =
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.androidHilt}"
+}
+
 object Deps {
     const val javaxInject = "javax.inject:javax.inject:1"
 
@@ -52,7 +61,8 @@ object Deps {
 
     const val androidxActivityKtx = "androidx.activity:activity-ktx:${Versions.androidxActivityKtx}"
     const val androidxFragmentKtx = "androidx.fragment:fragment-ktx:${Versions.androidxFragmentKtx}"
-    const val androidxCoreSplashScreen = "androidx.core:core-splashscreen:${Versions.androidxCoreSplashScreen}"
+    const val androidxCoreSplashScreen =
+        "androidx.core:core-splashscreen:${Versions.androidxCoreSplashScreen}"
 
     const val androidxLifeCycleViewModelKtx =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidxLifeCycle}"
@@ -94,5 +104,5 @@ object Deps {
     const val mavericks = "com.airbnb.android:mavericks:${Versions.mavericks}"
     const val mavericksCompose = "com.airbnb.android:mavericks-compose:${Versions.mavericksCompose}"
 
-        const val junit = "junit:junit:${Versions.junit}"
+    const val junit = "junit:junit:${Versions.junit}"
 }
