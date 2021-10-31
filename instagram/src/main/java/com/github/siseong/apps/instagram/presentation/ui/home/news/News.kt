@@ -9,9 +9,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.airbnb.mvrx.compose.collectAsState
 import com.airbnb.mvrx.compose.mavericksViewModel
+import com.github.siseong.apps.instagram.R
+import com.github.siseong.apps.instagram.domain.entity.common.Comment
+import com.github.siseong.apps.instagram.domain.entity.common.Image
+import com.github.siseong.apps.instagram.domain.entity.common.MediumSource
+import com.github.siseong.apps.instagram.domain.entity.common.Profile
 import com.github.siseong.apps.instagram.domain.entity.post.Post
+import com.github.siseong.apps.instagram.domain.entity.profile.Author
 import com.github.siseong.apps.instagram.presentation.ui.home.HomeStoryDivider
 import com.github.siseong.apps.instagram.presentation.ui.home.highlight.HomeStories
+import java.util.concurrent.TimeUnit
 
 @Composable
 fun HomeNews() {
@@ -28,8 +35,34 @@ fun HomeNews() {
             HomeStories()
             HomeStoryDivider()
         }
-        items(news.value.size) { index ->
-            New(news.value[index])
+        items(3) { index ->
+            New(
+                Post(
+                    author = Author(
+                        name = "Instagram",
+                        photo = Image(MediumSource.Local(R.drawable.instagram))
+                    ),
+                    media = listOf(Image(MediumSource.Local(R.drawable.instagram))),
+                    comments = listOf(
+                        Comment(
+                            profile = Profile(
+                                "Instagram",
+                                "instagram",
+                                listOf(Image(MediumSource.Local(R.drawable.instagram))),
+                                "url",
+                                "bio"
+                            ),
+                            R.string.instaram_description,
+                            false
+                        )
+                    ),
+                    "aaaa",
+                    true,
+                    1,
+                    false,
+                    System.currentTimeMillis() - TimeUnit.HOURS.toMillis(1L)
+                )
+            )
         }
     }
 }
