@@ -4,7 +4,6 @@
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
-    <string name="hello_world">Hello Square World!</string>
     <string name="instagram_count_like">%s likes</string>
     <string name="instaram">Instagram</string>
     <string name="instaram_description"><![CDATA[A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.]]></string>
@@ -36,5 +35,5 @@
     <string name="snachat_description">Easily talk with friends, view Live Stories from around the world, and explore news in Discover.</string>
     <string name="artwork">ArtWork</string>
     <string name="artwork_description">Illustrations, photographs, or other nontextual material prepared for inclusion in a publication.</string>
-    <string name="instagram_add_comment">Add a comment...</string>
+    <string name="instagram_add_comment">Add a comment</string>
 </resources>

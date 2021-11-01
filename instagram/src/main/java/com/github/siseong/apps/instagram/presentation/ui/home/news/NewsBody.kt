@@ -1,6 +1,5 @@
 package com.github.siseong.apps.instagram.presentation.ui.home.news
 
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable

@@ -59,7 +59,9 @@ import kotlinx.coroutines.launch
 @ExperimentalFoundationApi
 @Preview
 @Composable
-fun AppsPreview(apps: List<App>) {
+fun AppsPreview(
+    apps: List<App> = listOf()
+) {
     val state: LazyListState = rememberLazyListState()
     val appPreviewScope = rememberCoroutineScope()
     var visibleApps by remember { mutableStateOf(listOf<Int>()) }

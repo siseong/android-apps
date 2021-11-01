@@ -1,4 +1,4 @@
-package com.github.siseong.apps.presentation.ui.instagram.container.profile
+package com.github.siseong.apps.instagram.domain.entity.profile
 
 data class MyProfile (
     val name: String,

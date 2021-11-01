@@ -1,7 +1,6 @@
 package com.github.siseong.apps.instagram.domain.entity.post
 
 import com.github.siseong.apps.instagram.domain.entity.common.Comment
-import com.github.siseong.apps.instagram.domain.entity.common.Image
 import com.github.siseong.apps.instagram.domain.entity.common.Medium
 import com.github.siseong.apps.instagram.domain.entity.profile.Author
 
