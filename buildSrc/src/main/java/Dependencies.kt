@@ -13,6 +13,7 @@ object Versions {
 
     const val kotlinGradlePlugin = "1.5.21"
     const val kotlinxCoroutinesCore = "1.5.1"
+    const val ktor = "1.6.4"
 
     const val androidMaterial = "1.3.0"
     const val androidCoreKtx = "1.5.0-rc01"
@@ -60,6 +61,8 @@ object Deps {
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinGradlePlugin}"
     const val kotlinxCoroutinesCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinxCoroutinesCore}"
+    const val ktorCore = "io.ktor:ktor-client-core:${Versions.ktor}"
+    const val ktorAndroid = "io.ktor:ktor-client-android:${Versions.ktor}"
 
     const val androidMaterial = "com.google.android.material:material:${Versions.androidMaterial}"
     const val androidxCoreKtx = "androidx.core:core-ktx:${Versions.androidCoreKtx}"

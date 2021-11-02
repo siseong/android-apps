@@ -59,6 +59,8 @@ dependencies {
 
     implementation(Deps.kotlinStdLib)
     implementation(Deps.kotlinxCoroutinesCore)
+    implementation(Deps.ktorCore)
+    implementation(Deps.ktorAndroid)
 
     implementation(Deps.androidMaterial)
 
